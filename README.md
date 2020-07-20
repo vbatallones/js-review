@@ -40,3 +40,21 @@ This is my review of JavaScript.
         return array1.concat(array2);
     }
 ```
+
+## DOM Manipulation
+```js
+const container = document.querySelector('.container');
+console.log(container);
+
+const headerTwo = document.createElement('h2');
+headerTwo.textContent = 'My first JS review'
+
+container.appendChild(headerTwo)
+//Two ways in adding class on the element
+headerTwo.classList.add('subtitle', 'header-two');
+//headerTwo.setAttribute('class', 'header-two');
+
+headerTwo.classList.remove('header-two')
+console.log(headerTwo)
+
+```
