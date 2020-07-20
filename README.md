@@ -24,3 +24,19 @@ This is my review of JavaScript.
 
     }
 ```
+
+## Example of functions
+```Javascript
+
+    function combineName(name1, name2) {
+        return name1 + " " + name2
+    }
+
+    const addNumber = function(num1, num2) {
+        return num1 + num2;
+    }
+
+    const joinArray = (array1, array2) => {
+        return array1.concat(array2);
+    }
+```

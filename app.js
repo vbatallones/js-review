@@ -29,3 +29,15 @@ console.log(tesla)
 console.log(tesla.vehicles.vehicleThree)
 
 tesla.print();
+
+
+function printBike (array) {
+    // array.forEach(myBike => {
+    //     console.log(myBike)
+    // });
+    // for (let i = 0; i < array.length; i++) {
+    //     console.log(array[i])
+    // }
+}
+printBike(bike);
+printBike(tesla.foundingMembers)
