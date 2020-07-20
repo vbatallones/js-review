@@ -58,3 +58,32 @@ headerTwo.classList.remove('header-two')
 console.log(headerTwo)
 
 ```
+
+## More DOM Manipulation
+```JS
+//Create an element
+const headerThree = document.createElement('h2');
+headerThree.textContent = "Friends";
+//Append header to the container
+container.appendChild(headerThree);
+//Create a new element Unordered list
+const list = document.createElement('ul');
+//iterate over the array of bikes
+ for (let i = 0; i < bike.length; i++) {
+            let bikes = bike[i]
+            
+        //create a li for our ul.
+        const listItems = document.createElement('li');
+        //assgin the bike that we iterate too, into our li's
+        listItems.textContent = bikes
+        //append the li's to our ul
+        list.appendChild(listItems)
+    }
+    console.log(list)
+//we add a event that listen to a click to our header three
+headerThree.addEventListener('click', function() {
+    //we want to show our list of items everytime we click the header three.
+    container.appendChild(list);
+})
+
+```

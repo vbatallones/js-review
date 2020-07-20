@@ -1,7 +1,7 @@
-// let name = "Levin Batallones";
-// let age = 25;
-// let isCool = true;
-// const bike = ['Yamaha', 'Honda', 'Kawasaki', 'Harley', 'Triump'];
+let name = "Levin Batallones";
+let age = 25;
+let isCool = true;
+const bike = ['Yamaha', 'Honda', 'Kawasaki', 'Harley', 'Triump'];
 
 // const tesla = {
 //     industry: 'Electric Cars',
@@ -57,3 +57,31 @@ headerTwo.classList.add('subtitle', 'header-two');
 
 headerTwo.classList.remove('header-two')
 console.log(headerTwo)
+
+
+headerTwo.addEventListener('click', function() {
+    headerTwo.textContent = "Levin";
+});
+
+//make another element;
+
+const headerThree = document.createElement('h2');
+headerThree.textContent = "Friends";
+
+container.appendChild(headerThree);
+const list = document.createElement('ul');
+
+ for (let i = 0; i < bike.length; i++) {
+            let bikes = bike[i]
+            
+        //create a li
+        const listItems = document.createElement('li');
+        listItems.textContent = bikes
+
+        list.appendChild(listItems)
+    }
+    console.log(list)
+
+headerThree.addEventListener('click', function() {
+    container.appendChild(list);
+})
