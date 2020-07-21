@@ -21,6 +21,6 @@
 ```
 setting up boilerplate with shorcuts and placing class and id. 
 
-linking the **CSS** at the head of the **HTML**
+linking the **CSS** file at the head of the **HTML**
 
-linking the **JS** at the bottom of the body in a script tag
+linking the **JS** file at the bottom of the body in a script tag

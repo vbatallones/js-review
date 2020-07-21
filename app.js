@@ -210,7 +210,7 @@ function copyMachine(element, num) {
       numB.push(element);
     }
     return numB;
-    }
+}
 
     //everyOtherWord
     // Write a function everyOtherWord(sentence) that takes in a sentence and returns
@@ -241,29 +241,21 @@ function everyOtherWord(sentence) {
 //
 // Example 2
 let words = "Go to the store and grab the following: milk, bread, run, and cake";
-//console.log(wordYeller(words)) // "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
+console.log(wordYeller(words)) // "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
 function wordYeller (sentence) {
-
  let split = sentence.split(" ");
-
   let result = [];
-
   split.forEach(function (word) {
     let length = word.length - 1;
-
     let lastIndex = word[length];
-
     if (lastIndex === "!" || lastIndex === "," || lastIndex === "." || lastIndex === "?" || lastIndex === ":" || lastIndex === ";") {
       result.push(word);
     } else {
       let last = word + "!";
-
       result.push(last);
     }
   });
-
   let newResult = result.join(" ");
-
   return newResult;
 }
 
