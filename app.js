@@ -141,28 +141,43 @@ const bike = ['Yamaha', 'Honda', 'Kawasaki', 'Harley', 'Triump'];
 // ```
 // ['taylor', 'rome', 'adam'], 'rome'
 
-// function isInside(array, ele) {
+function isInside(array, ele) {
     
-//    for (let i = 0; i < array.length; i++) {
-//        if(array[i] === ele) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
+   for (let i = 0; i < array.length; i++) {
+       if(array[i] === ele) {
+           return true;
+       } else {
+           return false;
+       }
+   }
 
-// }
+}
 // console.log(isInside(['pete', 'adam', 'taylor'], 'pete'))
 
+//## reverseStr
+// Write a function reverseStr(str) that takes in a string as a parameter and
+// returns the string but with the characters in reverse.
+//
+// Examples:
+//
+// console.log(reverseStr('bootcamp')); //=> 'pmactoob'
+// console.log(reverseStr('General Assembly')); //=> 'ylbmessA lareneG'
 
+function reverseStr(str) {
+    let reverseOne = str.split('');
+    let reverseTwo = reverseOne.reverse();
+    let join = reverseTwo.join('');
+    
+    return join;
+  }
 //### luckySevensjs
 // Write a function `luckySevens(max)` that returns an array of all numbers up
 // to max (inclusive) that are divisible by 7.
 //
 // Examples:
 //
-console.log(luckySevens(25)); // => [ 7, 14, 21 ]
-console.log(luckySevens(42)); // => [ 7, 14, 21, 28, 35, 42 ]
+// console.log(luckySevens(25)); // => [ 7, 14, 21 ]
+// console.log(luckySevens(42)); // => [ 7, 14, 21, 28, 35, 42 ]
 
 function luckySevens(num) {
 
