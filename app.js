@@ -161,13 +161,17 @@ const bike = ['Yamaha', 'Honda', 'Kawasaki', 'Harley', 'Triump'];
 //
 // Examples:
 //
-// luckySevens(25); // => [ 7, 14, 21 ]
-// luckySevens(42); // => [ 7, 14, 21, 28, 35, 42 ]
+console.log(luckySevens(25)); // => [ 7, 14, 21 ]
+console.log(luckySevens(42)); // => [ 7, 14, 21, 28, 35, 42 ]
 
-function luckySevens(max) {
-    let result = [];
+function luckySevens(num) {
 
-    while (max > 1) {
-        
+    let numb = [];
+    
+    for (var i = 1; i < num; i++){
+      if (i % 7 === 0) {
+      numb.push(i)
+      }
     }
-}
+    return numb;
+    } 
