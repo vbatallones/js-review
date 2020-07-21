@@ -241,7 +241,7 @@ function everyOtherWord(sentence) {
 //
 // Example 2
 let words = "Go to the store and grab the following: milk, bread, run, and cake";
-console.log(wordYeller(words)) // "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
+//console.log(wordYeller(words)) // "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
 function wordYeller (sentence) {
 
  let split = sentence.split(" ");
@@ -265,4 +265,28 @@ function wordYeller (sentence) {
   let newResult = result.join(" ");
 
   return newResult;
+}
+
+// Write a function arraySubstring(words, str) that takes in an array of
+// strings and a string as arguments and returns an array where each element is
+// replaced with true if the string is a substring of the element and false if
+// it is not.
+//
+// Examples:
+//
+ console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"));
+//=> [true, false, true, true]
+// arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
+// => [true, false, false, true]
+function arraySubstring(words, str) {
+  let result = [];
+  for (let i = 0; i < words.length; i++) {
+    let subStr = words[i].substring(0,3)
+    if (subStr === str) {
+      result.push(true);
+    } else {
+      result.push(false);
+    }
+  }
+  return result
 }
