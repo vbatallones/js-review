@@ -274,7 +274,7 @@ function wordYeller (sentence) {
 //
 // Examples:
 //
- console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"));
+ //console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"));
 //=> [true, false, true, true]
 // arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
 // => [true, false, false, true]
@@ -290,3 +290,31 @@ function arraySubstring(words, str) {
   }
   return result
 }
+
+//Write a function evenCaps(sentence) that takes in a sentence as an
+// argument and returns the same string with each even index being
+// capitalized. Index 0 counts as even.
+//
+// Examples:
+//
+// console.log(evenCaps("Tom got a small piece of pie"))
+// => "ToM GoT A SmAlL PiEcE Of pIe"
+//evenCaps("the book is in front of the table")
+// => "ThE BoOk iS In fRoNt oF ThE TaBlE"
+ function evenCaps(sentence) {
+   let str1 = "";
+   let str2 = sentence.toLowerCase();
+
+   for (let i = 0; i < str2.length; i++) {
+     let word = str2[i];
+
+     if(i === 0) {
+       str1 += word.toUpperCase();
+     } else if (i % 2 === 0) {
+       str1 += word.toUpperCase();
+     } else {
+       str1 += word.toLowerCase();
+     }
+   }
+   return str1
+ }
