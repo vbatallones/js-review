@@ -1,7 +1,7 @@
-let name = "Levin Batallones";
-let age = 25;
-let isCool = true;
-const bike = ['Yamaha', 'Honda', 'Kawasaki', 'Harley', 'Triump'];
+// let name = "Levin Batallones";
+// let age = 25;
+// let isCool = true;
+// const bike = ['Yamaha', 'Honda', 'Kawasaki', 'Harley', 'Triump'];
 
 // const tesla = {
 //     industry: 'Electric Cars',
@@ -173,22 +173,21 @@ function reverseStr(str) {
 //### luckySevensjs
 // Write a function `luckySevens(max)` that returns an array of all numbers up
 // to max (inclusive) that are divisible by 7.
-//
-// Examples:
+//`~` Examples:
 //
 // console.log(luckySevens(25)); // => [ 7, 14, 21 ]
-// console.log(luckySevens(42)); // => [ 7, 14, 21, 28, 35, 42 ]
+//console.log(luckySevens(42)); // => [ 7, 14, 21, 28, 35, 42 ]
 
 function luckySevens(num) {
 
-    let numb = [];
+    let newArr = [];
     
-    for (var i = 1; i < num; i++){
+    for (let i = 1; i < num; i++){
       if (i % 7 === 0) {
-      numb.push(i)
+      newArr.push(i)
       }
     }
-    return numb;
+    return newArr;
     } 
     //copyMachine
  // Write a function copyMachine(element, num) that takes in an element and a number
@@ -199,17 +198,14 @@ function luckySevens(num) {
  //console.log(copyMachine('candy', 0)); // => []
  //copyMachine('candy', 2); // => [ 'candy', 'candy' ]
  //copyMachine('bread', 4); // => [ 'bread', 'bread', 'bread', 'bread' ]
-// copyMachine(11, 6); // => [ 11, 11, 11, 11, 11, 11 ]
+//console.log(copyMachine(11, 6)); // => [ 11, 11, 11, 11, 11, 11 ]
 
 function copyMachine(element, num) {
-
-    let numB = [];
-    
+    let newArr = [];
     for (var i = 0; i < num; i++) {
-    
-      numB.push(element);
+      newArr.push(element);
     }
-    return numB;
+    return newArr;
 }
 
     //everyOtherWord
@@ -219,13 +215,13 @@ function copyMachine(element, num) {
 // Examples:
 //
  //console.log(everyOtherWord('hello how are you doing on this lovely day?')); // => [ 'hello', 'are', 'doing', 'this', 'day?' ]
-// everyOtherWord('the weather is wonderful'); // => [ 'the', 'is' ]
+ console.log(everyOtherWord('the weather is wonderful')); // => [ 'the', 'is' ]
 function everyOtherWord(sentence) {
     let result = [];
-    let split = sentence.split(' ')
+    let split = sentence.split(' ');
     for (let i = 0; i < split.length; i+=2) {
-      let word = split[i]
-        result.push(word)
+      let word = split[i];
+        result.push(word);
     }
     return result;
   }
@@ -240,8 +236,8 @@ function everyOtherWord(sentence) {
 // yelledWords === "Stop! it! now! Please, wont! you! stop?"; // => true
 //
 // Example 2
-let words = "Go to the store and grab the following: milk, bread, run, and cake";
-console.log(wordYeller(words)) // "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
+// let words = "Go to the store and grab the following: milk, bread, run, and cake";
+// console.log(wordYeller(words)) // "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
 function wordYeller (sentence) {
  let split = sentence.split(" ");
   let result = [];
@@ -268,7 +264,7 @@ function wordYeller (sentence) {
 //
  //console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"));
 //=> [true, false, true, true]
-// arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
+//console.log(arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre"));
 // => [true, false, false, true]
 function arraySubstring(words, str) {
   let result = [];
